@@ -1,0 +1,931 @@
+{
+    "courses": {
+        "EXCTA0301": {
+            "name": "Calculo Diferencial e Integral",
+            "prerequisites": [],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 0,
+            "y": 0
+        },
+        "EXCTA0201": {
+            "name": "Química I",
+            "prerequisites": [],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 0,
+            "y": 1
+        },
+        "COMPA0J01": {
+            "name": "Fundamentos de Programación",
+            "prerequisites": [],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 0,
+            "y": 2
+        },
+        "EXCTA0302": {
+            "name": "Álgebra Lineal",
+            "prerequisites": [],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 0,
+            "y": 3
+        },
+        "COMPA0G01": {
+            "name": "Fundamentos de la Ingeniería de Software",
+            "prerequisites": [],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 0,
+            "y": 4
+        },
+        "CHUMA0100": {
+            "name": "Metodología de la Investigación Científica",
+            "prerequisites": [],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 0,
+            "y": 5
+        },
+        "EXCTA0303": {
+            "name": "Calculo Vectorial",
+            "prerequisites": [
+                "EXCTA0302",
+                "EXCTA0301"
+            ],
+            "cd": 3,
+            "cpe": 1,
+            "ca": 5,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 16,
+            "ca_hours": 80,
+            "presential_hours": 4,
+            "total_credits": 3,
+            "x": 1,
+            "y": 0
+        },
+        "EXCTA0001": {
+            "name": "Física I",
+            "prerequisites": [
+                "EXCTA0301",
+                "EXCTA0302"
+            ],
+            "cd": 3,
+            "cpe": 1,
+            "ca": 5,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 16,
+            "ca_hours": 80,
+            "presential_hours": 4,
+            "total_credits": 3,
+            "x": 1,
+            "y": 1
+        },
+        "EXCTA0401": {
+            "name": "Ecuaciones Diferenciales Ordinarias",
+            "prerequisites": [
+                "EXCTA0301",
+                "EXCTA0302"
+            ],
+            "cd": 3,
+            "cpe": 1,
+            "ca": 5,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 16,
+            "ca_hours": 80,
+            "presential_hours": 4,
+            "total_credits": 3,
+            "x": 1,
+            "y": 2
+        },
+        "SEGDA0000": {
+            "name": "Liderazgo",
+            "prerequisites": [
+                "CHUMA0101"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 1,
+            "y": 3
+        },
+        "COMPA0J08": {
+            "name": "Programación Orientada a Objetos",
+            "prerequisites": [
+                "COMPA0J01"
+            ],
+            "cd": 4,
+            "cpe": 4,
+            "ca": 4,
+            "hs": 12,
+            "hpao": 192,
+            "cd_hours": 64,
+            "cpe_hours": 64,
+            "ca_hours": 64,
+            "presential_hours": 8,
+            "total_credits": 4,
+            "x": 1,
+            "y": 4
+        },
+        "COMPA0J09": {
+            "name": "Estructura de Datos",
+            "prerequisites": [
+                "COMPA0J08"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 2,
+            "y": 0
+        },
+        "COMPA0F03": {
+            "name": "Modelos Discretos para Ingeniería SO",
+            "prerequisites": [
+                "EXCTA0302"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 2,
+            "y": 1
+        },
+        "EXCTA0501": {
+            "name": "Estadística",
+            "prerequisites": [
+                "EXCTA0301",
+                "EXCTA0302"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 2,
+            "y": 2
+        },
+        "EXCTA0402": {
+            "name": "Métodos Numéricos",
+            "prerequisites": [
+                "EXCTA0401"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 2,
+            "y": 3
+        },
+        "TCONA0301": {
+            "name": "Cultura Ambiental",
+            "prerequisites": [],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 2,
+            "y": 4
+        },
+        "SEGDA0100": {
+            "name": "Realidad Nacional y Geopolítica",
+            "prerequisites": [
+                "SEGDA0000"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 2,
+            "y": 5
+        },
+        "COMPA0I01": {
+            "name": "Computación Digital",
+            "prerequisites": [
+                "COMPA0F03"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 3,
+            "y": 0
+        },
+        "COMPA0G07": {
+            "name": "Programación Web",
+            "prerequisites": [
+                "COMPA0J09"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 3,
+            "y": 1
+        },
+        "COMPA0G06": {
+            "name": "Modelos de Procesos de Desarrollo de Software",
+            "prerequisites": [
+                "COMPA0G01"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 3,
+            "y": 2
+        },
+        "COMPA0H02": {
+            "name": "Sistemas de Bases de Datos",
+            "prerequisites": [
+                "COMPA0J09",
+                "COMPA0F03"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 3,
+            "y": 3
+        },
+        "COMPA0G04": {
+            "name": "Ingeniería de Usabilidad",
+            "prerequisites": [
+                "COMPA0G01"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 3,
+            "y": 4
+        },
+        "COMPA0J11": {
+            "name": "Computación Paralela",
+            "prerequisites": [
+                "COMPA0J09"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 3,
+            "y": 5
+        },
+        "COMPA0H04": {
+            "name": "Sistemas Avanzados de Bases de Datos",
+            "prerequisites": [
+                "COMPA0H02"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 4,
+            "y": 0
+        },
+        "COMPA0G09": {
+            "name": "Desarrollo Web Avanzado",
+            "prerequisites": [
+                "COMPA0G07",
+                "COMPA0G06"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 4,
+            "y": 1
+        },
+        "COMPA0G10": {
+            "name": "Ingenieria de Requisitos de Software",
+            "prerequisites": [
+                "COMPA0G06"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 4,
+            "y": 2
+        },
+        "COMPA0J13": {
+            "name": "Computacion Gráfica",
+            "prerequisites": [
+                "EXCTA0303",
+                "EXCTA0001"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 4,
+            "y": 3
+        },
+        "COMPA0K01": {
+            "name": "Investigación en la Ingeniería de Software",
+            "prerequisites": [
+                "CHUMA0101"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 4,
+            "y": 4
+        },
+        "COMPA0I07": {
+            "name": "Redes de Computadores",
+            "prerequisites": [
+                "COMPA0F03"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 4,
+            "y": 5
+        },
+        "COMPA0L03": {
+            "name": "Aplicaciones Basadas en el Conocimiento",
+            "prerequisites": [
+                "COMPA0J09",
+                "COMPA0F03"
+            ],
+            "cd": 3,
+            "cpe": 3,
+            "ca": 3,
+            "hs": 9,
+            "hpao": 144,
+            "cd_hours": 48,
+            "cpe_hours": 48,
+            "ca_hours": 48,
+            "presential_hours": 6,
+            "total_credits": 3,
+            "x": 5,
+            "y": 0
+        },
+        "COMPA0G15": {
+            "name": "Pruebas  de Software",
+            "prerequisites": [
+                "COMPA0G10"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 5,
+            "y": 1
+        },
+        "COMPA0G11": {
+            "name": "Análisis y diseño de software",
+            "prerequisites": [
+                "COMPA0G10"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 5,
+            "y": 2
+        },
+        "COMPA0I08": {
+            "name": "Sistemas Operativos",
+            "prerequisites": [
+                "COMPA0I07"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 5,
+            "y": 3
+        },
+        "COMPA0K03": {
+            "name": "Lectura y Escritura de Textos Académicos",
+            "prerequisites": [
+                "COMPA0K01"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 5,
+            "y": 4
+        },
+        "COMPA0G12": {
+            "name": "Desarrollo de Aplicaciones Móviles",
+            "prerequisites": [
+                "COMPA0G09"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 5,
+            "y": 5
+        },
+        "COMPA0G18": {
+            "name": "Aseguramiento de la Calidad de Software",
+            "prerequisites": [
+                "COMPA0G15"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 6,
+            "y": 1
+        },
+        "COMPA0G16": {
+            "name": "Aplicaciones Distribuidas",
+            "prerequisites": [
+                "COMPA0G09"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 6,
+            "y": 2
+        },
+        "COMPA0I09": {
+            "name": "Ingeniería de la Seguridad del Software",
+            "prerequisites": [
+                "COMPA0I08"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 6,
+            "y": 3
+        },
+        "COMPA0J14": {
+            "name": "Desarrollo de Video Juegos",
+            "prerequisites": [
+                "COMPA0L03",
+                "COMPA0J13"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 6,
+            "y": 4
+        },
+        "COMPA0G19": {
+            "name": "Desarrollo de Software  Seguro",
+            "prerequisites": [
+                "COMPA0G15",
+                "COMPA0G11"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 6,
+            "y": 5
+        },
+        "COMPA0G23": {
+            "name": "Construcción y Evolución del Software",
+            "prerequisites": [
+                "COMPA0G18"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 7,
+            "y": 1
+        },
+        "COMPA0G21": {
+            "name": "Arquitectura de Software",
+            "prerequisites": [
+                "COMPA0G16",
+                "COMPA0G19"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 7,
+            "y": 2
+        },
+        "COMPA0G24": {
+            "name": "Desarrollo de Software Aplicado al Dominio de la Interculturalidad",
+            "prerequisites": [
+                "COMPA0I09"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 7,
+            "y": 3
+        },
+        "CADMA0G00": {
+            "name": "Gestión  y Emprendimiento",
+            "prerequisites": [
+                "COMPAG018"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 7,
+            "y": 4
+        },
+        "COMPA0G25": {
+            "name": "Gestión de Proyectos de Software",
+            "prerequisites": [
+                "COMPA0G11"
+            ],
+            "cd": 2,
+            "cpe": 2,
+            "ca": 2,
+            "hs": 6,
+            "hpao": 96,
+            "cd_hours": 32,
+            "cpe_hours": 32,
+            "ca_hours": 32,
+            "presential_hours": 4,
+            "total_credits": 2,
+            "x": 7,
+            "y": 5
+        }
+    },
+    "adjacencies": {
+        "EXCTA0301": [
+            "EXCTA0303",
+            "EXCTA0001",
+            "EXCTA0401",
+            "EXCTA0501"
+        ],
+        "EXCTA0201": [],
+        "COMPA0J01": [
+            "COMPA0J08"
+        ],
+        "EXCTA0302": [
+            "EXCTA0303",
+            "EXCTA0001",
+            "EXCTA0401",
+            "COMPA0F03",
+            "EXCTA0501"
+        ],
+        "COMPA0G01": [
+            "COMPA0G06",
+            "COMPA0G04"
+        ],
+        "CHUMA0100": [],
+        "EXCTA0303": [
+            "COMPA0J13"
+        ],
+        "EXCTA0001": [
+            "COMPA0J13"
+        ],
+        "EXCTA0401": [
+            "EXCTA0402"
+        ],
+        "SEGDA0000": [
+            "SEGDA0100"
+        ],
+        "COMPA0J08": [
+            "COMPA0J09"
+        ],
+        "COMPA0J09": [
+            "COMPA0G07",
+            "COMPA0H02",
+            "COMPA0J11",
+            "COMPA0L03"
+        ],
+        "COMPA0F03": [
+            "COMPA0I01",
+            "COMPA0H02",
+            "COMPA0I07",
+            "COMPA0L03"
+        ],
+        "EXCTA0501": [],
+        "EXCTA0402": [],
+        "TCONA0301": [],
+        "SEGDA0100": [],
+        "COMPA0I01": [],
+        "COMPA0G07": [
+            "COMPA0G09"
+        ],
+        "COMPA0G06": [
+            "COMPA0G09",
+            "COMPA0G10"
+        ],
+        "COMPA0H02": [
+            "COMPA0H04"
+        ],
+        "COMPA0G04": [],
+        "COMPA0J11": [],
+        "COMPA0H04": [],
+        "COMPA0G09": [
+            "COMPA0G12",
+            "COMPA0G16"
+        ],
+        "COMPA0G10": [
+            "COMPA0G15",
+            "COMPA0G11"
+        ],
+        "COMPA0J13": [
+            "COMPA0J14"
+        ],
+        "COMPA0K01": [
+            "COMPA0K03"
+        ],
+        "COMPA0I07": [
+            "COMPA0I08"
+        ],
+        "COMPA0L03": [
+            "COMPA0J14"
+        ],
+        "COMPA0G15": [
+            "COMPA0G18",
+            "COMPA0G19"
+        ],
+        "COMPA0G11": [
+            "COMPA0G19",
+            "COMPA0G25"
+        ],
+        "COMPA0I08": [
+            "COMPA0I09"
+        ],
+        "COMPA0K03": [],
+        "COMPA0G12": [],
+        "COMPA0G18": [
+            "COMPA0G23"
+        ],
+        "COMPA0G16": [
+            "COMPA0G21"
+        ],
+        "COMPA0I09": [
+            "COMPA0G24"
+        ],
+        "COMPA0J14": [],
+        "COMPA0G19": [
+            "COMPA0G21"
+        ],
+        "COMPA0G23": [],
+        "COMPA0G21": [],
+        "COMPA0G24": [],
+        "CADMA0G00": [],
+        "COMPA0G25": []
+    }
+}

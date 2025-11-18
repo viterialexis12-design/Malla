@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="182.37679mm"
+   height="169.58363mm"
+   viewBox="0 0 182.37679 169.58363"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="search.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.868247,-69.759116)">
+    <g
+       id="g6247"
+       transform="matrix(1.2890792,0,0,1.2412207,-4989.2346,-17124.87)">
+      <path
+         d="m 3938.1,13853 c -0.9295,0 -1.8595,0 -2.7884,0.04 -14.862,0.577 -29.504,6.795 -40.346,18.512 -21.683,23.435 -20.253,60.324 3.1819,82.008 23.434,21.683 60.326,20.251 82.01,-3.183 21.684,-23.435 20.251,-60.325 -3.1839,-82.009 -10.985,-10.163 -24.928,-15.249 -38.874,-15.369 z m -0.2024,20.65 c 8.9191,0.08 17.842,3.383 24.963,9.971 15.192,14.057 16.099,37.452 2.0428,52.643 -14.056,15.191 -37.452,16.099 -52.643,2.043 -15.191,-14.056 -16.099,-37.45 -2.0426,-52.641 7.0279,-7.596 16.392,-11.621 25.897,-11.99 0.594,-0.02 1.1883,-0.03 1.7828,-0.03 z"
+         clip-rule="nonzero"
+         color="#000000"
+         color-rendering="auto"
+         dominant-baseline="auto"
+         enable-background="accumulate"
+         fill="#59f"
+         fill-rule="nonzero"
+         image-rendering="auto"
+         shape-rendering="auto"
+         solid-color="#000000"
+         style="font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1"
+         id="path5731" />
+      <path
+         d="m 3972.6,13944 38.081,35.235"
+         fill="none"
+         stroke="#59f"
+         stroke-linecap="round"
+         stroke-linejoin="miter"
+         stroke-miterlimit="4"
+         stroke-width="20.781"
+         id="path5733"
+         style="fill:#ffffff;fill-opacity:1;stroke:#feffff;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

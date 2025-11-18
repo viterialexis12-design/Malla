@@ -1,0 +1,54 @@
+QFrame , QWidget {
+    background-color: #1A1C20;
+    border: none;
+    color: #FFFFFF;
+}
+#titulo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{
+    background-color: #282C34; 
+    border-radius: 10px;
+    color: white;	
+}
+
+#frame_contenedor_perfiles, #frame_barra_superior{
+    border-radius: 2px;
+}
+
+#boton_tema , #boton_github, #boton_ayuda {
+    border: none;
+	color: white; 
+	background-color: #1A1C20;
+	border-radius: 5px;
+	padding: 3px;
+}
+#boton_tema:hover,
+#boton_github:hover,
+#boton_buscar:hover,
+#boton_crear_perfil:hover,
+#boton_ayuda:hover {
+    background-color: #3C4048;         
+	border-radius: 10px;      
+}
+
+#boton_crear_perfil{
+    background-color: #FFFFFF; 
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#boton_buscar{
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgba(0,0,0,0); 
+}
+
+ #linea_buscar{
+	border-radius: 5px;
+	padding: 5px;
+}
+
+
