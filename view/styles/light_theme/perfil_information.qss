@@ -1,0 +1,60 @@
+QWidget {
+    background-color: #FFFFFF;
+    border: none;
+    color: #212121;
+}
+QPushButton{
+    border: none;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+#boton_editar{
+	background-color: #03A9F4; 
+}
+#boton_borrar{
+  	background-color: #D32F2F; 
+}
+#boton_editar:hover {
+    background-color: #8ed1f0; 
+}
+#boton_borrar:hover {
+    background-color: #df7b79; 
+}
+
+#barra_superior{
+	background-color: #5c5e61; 
+	border-top-right-radius: 10px;
+	padding:5%;
+}
+
+#frame_contenido{
+	border-right: 1px solid #5c5e61;
+	border-left: 1px solid #5c5e61;
+	border-bottom: 1px solid #5c5e61;
+	border-bottom-left-radius: 10px;
+}
+#label_cursos_habilitados, #label_malla{
+    font-weight: bold;     
+}
+
+#label_informacion_perfil{
+	background-color: #5c5e61; 
+	color: #FFFFFF;
+	font-weight: bold;     
+}
+#label_nombre_perfil{
+	background-color: #5c5e61; 
+	color: #FFFFFF;     
+}
+
+
+#frame, #frame_2{
+    border: 1px solid #5c5e61;
+}
+
+#frame, #scrollArea_cursos,#scrollAreaWidgetContents_cursos{
+	border-bottom-left-radius: 10px;
+}
+
+

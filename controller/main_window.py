@@ -2,6 +2,11 @@ from PySide6.QtWidgets import QMainWindow, QWidget
 from view.Ui_main_window_1 import MainWindow 
 import os
 from PySide6.QtGui import QIcon
+from controller.perfil_widget import PerfilWidget
+from PySide6.QtWidgets import QVBoxLayout, QScrollArea, QSizePolicy
+from PySide6.QtCore import Qt
+from controller.perfil_information_widget import PerfilWidgetInformation 
+from controller.planification_information import PlanificationWidgetInformation
 
 def cargar_estilo_qss(ruta_archivo):
         try:
@@ -10,6 +15,7 @@ def cargar_estilo_qss(ruta_archivo):
         except FileNotFoundError:
             print(f"Error: Archivo de estilo no encontrado en {ruta_archivo}")
             return ""
+
         
 class MainWindowForm(QMainWindow, MainWindow):
     def __init__(self):
@@ -33,25 +39,44 @@ class MainWindowForm(QMainWindow, MainWindow):
             }
         }
         self.aplicar_tema(self.tema_actual)
+        self.resizeScrollArea_perfil_cards()
+        self.load_perfil_cards()
+        self.load_perfil_information_widget()
+        self.load_planification_information_widget()
+        self.boton_tema.clicked.connect(self.cambiar_tema)
 
+    def load_perfil_cards(self):
+        while self.vertical_layout.count() > 1: 
+            child = self.vertical_layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        
+        for i in range(10):
+            card = PerfilWidget()
+            card.aplicar_tema(self.tema_actual)
+            self.vertical_layout.insertWidget(self.vertical_layout.count() - 1, card)
+
+    def update_width_profile_cards(self, event):
+        viewport_width = self.scroll_area.viewport().width()
+        self.scroll_content.setFixedWidth(viewport_width)
         
     def aplicar_tema(self, tema):
         ruta_base = os.path.dirname(os.path.abspath(__file__)) 
         if tema == "dark_theme":
-            ruta_estilo = os.path.join(ruta_base, "..", "view", "styles", "dark_theme.qss")
+            ruta_estilo = os.path.join(ruta_base, "..", "view", "styles","dark_theme", "main_window.qss")
         elif tema == "light_theme":
-            ruta_estilo = os.path.join(ruta_base, "..", "view", "styles", "light_theme.qss")
+            ruta_estilo = os.path.join(ruta_base, "..", "view", "styles", "light_theme","main_window.qss")
         else:
             print("Tema no válido.")
             return
         estilo = cargar_estilo_qss(ruta_estilo)
         self.setStyleSheet(estilo)
 
+
         if tema in self.icon_paths:
             current_icons = self.icon_paths[tema]
             botones = [self.boton_tema, self.boton_github, self.boton_ayuda, 
                        self.boton_crear_perfil, self.boton_buscar]
-            
             for boton in botones:
                 obj_name = boton.objectName()
                 if obj_name in current_icons:
@@ -62,9 +87,42 @@ class MainWindowForm(QMainWindow, MainWindow):
         print(f"Tema cambiado a: {tema}")
 
     def cambiar_tema(self):
-        if self.tema_actual == "dark_theme":
-            self.aplicar_tema("light_theme")
-        else:
-            self.aplicar_tema("dark_theme")
+        nuevo_tema = "light_theme" if self.tema_actual == "dark_theme" else "dark_theme"
+        self.aplicar_tema(nuevo_tema)
+        self.load_perfil_cards()
+        if hasattr(self, 'perfil_info_widget'):
+            self.perfil_info_widget.aplicar_tema(nuevo_tema)
+        if hasattr(self, 'planification_info_widget'):
+            self.planification_info_widget.aplicar_tema(nuevo_tema)
 
-    
+    def resizeScrollArea_perfil_cards(self):
+        self.scroll_area = self.scrollArea 
+        self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scroll_area.setWidgetResizable(True) 
+        self.scroll_content = QWidget()
+        self.vertical_layout = QVBoxLayout(self.scroll_content)
+        self.vertical_layout.setSpacing(20)
+        self.vertical_layout.addStretch(1) 
+        self.scroll_area.setWidget(self.scroll_content)
+        self.scroll_area.resizeEvent = self.update_width_profile_cards
+        self.update_width_profile_cards(None) 
+
+    def load_perfil_information_widget(self):
+        card = PerfilWidgetInformation()
+        card.aplicar_tema(self.tema_actual)
+        self.perfil_info_widget = card
+        info_layout = self.frame_informacion_perfil.layout() 
+        if info_layout is None:
+            info_layout = QVBoxLayout(self.frame_informacion_perfil)
+            print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información.")
+        info_layout.addWidget(card)
+
+    def load_planification_information_widget(self):
+        card= PlanificationWidgetInformation()
+        card.aplicar_tema(self.tema_actual)
+        self.planification_info_widget = card
+        info_layout = self.frame_informacion_planificacion.layout() 
+        if info_layout is None:
+            info_layout = QVBoxLayout(self.frame_informacion_planificacion)
+            print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información.")
+        info_layout.addWidget(card)

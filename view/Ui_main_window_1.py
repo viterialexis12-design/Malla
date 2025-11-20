@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
+    QLineEdit, QMainWindow, QPushButton, QScrollArea,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class MainWindow(object):
     def setupUi(self, MainWindow):
@@ -25,9 +25,9 @@ class MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1920, 1044)
         MainWindow.setStyleSheet(u"QFrame , QWidget {\n"
-"    background-color: #1A1C20;\n"
+"    background-color: #FFFFFF;\n"
 "    border: none;\n"
-"    color: #FFFFFF;\n"
+"    color: #212121;\n"
 "}\n"
 "#titulo{\n"
 "    font-size: 24px;\n"
@@ -35,9 +35,9 @@ class MainWindow(object):
 "}\n"
 "\n"
 "#frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{\n"
-"    background-color: #282C34; \n"
+"    background-color: #F0F4F7; \n"
 "    border-radius: 10px;\n"
-"    color: white;	\n"
+"    color: black;	\n"
 "}\n"
 "\n"
 "#frame_contenedor_perfiles, #frame_barra_superior{\n"
@@ -46,8 +46,8 @@ class MainWindow(object):
 "\n"
 "#boton_tema , #boton_github, #boton_ayuda {\n"
 "    border: none;\n"
-"	color: white; \n"
-"	background-color: #1A1C20;\n"
+"	color: black; \n"
+"	background-color: white;\n"
 "	border-radius: 5px;\n"
 "	padding: 3px;\n"
 "}\n"
@@ -56,21 +56,22 @@ class MainWindow(object):
 "#boton_buscar:hover,\n"
 "#boton_crear_perfil:hover,\n"
 "#boton_ayuda:hover {\n"
-"    background-color: #3C4048;         \n"
-"	border-radius: 10px;      \n"
+"    background-color: #dbe0e3;         \n"
+"	 border-radius: 10px;      \n"
 "}\n"
 "\n"
 "#boton_crear_perfil{\n"
-"    background-color: #FFFFFF; \n"
+"    background-color: #212121; \n"
 ""
                         "	border-radius: 10px;\n"
-"	padding: 5px;\n"
+"    padding: 5px;\n"
 "}\n"
 "\n"
 "#boton_buscar{\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
-"	background-color: rgba(0,0,0,0); \n"
+"	background-color: rgba(0,0,0,0);\n"
+"    padding: 5px;\n"
 "}\n"
 "\n"
 " #linea_buscar{\n"
@@ -104,19 +105,18 @@ class MainWindow(object):
         self.horizontalLayout_4.addItem(self.horizontalSpacer)
 
         self.boton_tema = QPushButton(self.frame_barra_superior)
-        self.boton_tema.clicked.connect(self.cambiar_tema)
         self.boton_tema.setObjectName(u"boton_tema")
         # icon = QIcon()
-        # icon.addFile(u"../Malla/view/resources/moon.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # icon.addFile(u"../resources/light_theme/moon.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         # self.boton_tema.setIcon(icon)
-        self.boton_tema.setIconSize(QSize(30, 30))
+        self.boton_tema.setIconSize(QSize(32, 32))
 
         self.horizontalLayout_4.addWidget(self.boton_tema)
 
         self.boton_github = QPushButton(self.frame_barra_superior)
         self.boton_github.setObjectName(u"boton_github")
         # icon1 = QIcon()
-        # icon1.addFile(u"../Malla/view/resources/Github_logo.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # icon1.addFile(u"../resources/light_theme/Github_logo.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         # self.boton_github.setIcon(icon1)
         self.boton_github.setIconSize(QSize(32, 32))
 
@@ -125,7 +125,7 @@ class MainWindow(object):
         self.boton_ayuda = QPushButton(self.frame_barra_superior)
         self.boton_ayuda.setObjectName(u"boton_ayuda")
         # icon2 = QIcon()
-        # icon2.addFile(u"../Malla/view/resources/help.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # icon2.addFile(u"../resources/light_theme/help.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         # self.boton_ayuda.setIcon(icon2)
         self.boton_ayuda.setIconSize(QSize(32, 32))
 
@@ -168,7 +168,7 @@ class MainWindow(object):
         self.boton_buscar = QPushButton(self.frame_barra_busqueda)
         self.boton_buscar.setObjectName(u"boton_buscar")
         # icon3 = QIcon()
-        # icon3.addFile(u"../Malla/view/resources/search.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # icon3.addFile(u"../resources/light_theme/search.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         # self.boton_buscar.setIcon(icon3)
         self.boton_buscar.setIconSize(QSize(20, 20))
 
@@ -180,7 +180,7 @@ class MainWindow(object):
         self.boton_crear_perfil = QPushButton(self.frame_barra_busqueda)
         self.boton_crear_perfil.setObjectName(u"boton_crear_perfil")
         # icon4 = QIcon()
-        # icon4.addFile(u"../Malla/view/resources/mas.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # icon4.addFile(u"../resources/light_theme/mas.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         # self.boton_crear_perfil.setIcon(icon4)
         self.boton_crear_perfil.setIconSize(QSize(30, 30))
 
@@ -193,6 +193,20 @@ class MainWindow(object):
         self.frame_contenedor_perfiles.setObjectName(u"frame_contenedor_perfiles")
         self.frame_contenedor_perfiles.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_contenedor_perfiles.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_contenedor_perfiles)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.scrollArea = QScrollArea(self.frame_contenedor_perfiles)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setWidgetResizable(True)
+        self.contenedor = QWidget()
+        self.contenedor.setObjectName(u"contenedor")
+        self.contenedor.setGeometry(QRect(0, 0, 365, 904))
+        self.verticalLayout_5 = QVBoxLayout(self.contenedor)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.scrollArea.setWidget(self.contenedor)
+
+        self.horizontalLayout_5.addWidget(self.scrollArea)
+
 
         self.verticalLayout_4.addWidget(self.frame_contenedor_perfiles)
 
@@ -206,40 +220,38 @@ class MainWindow(object):
         self.frame_5.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_5)
-        self.verticalLayout_2.setSpacing(2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.frame_6 = QFrame(self.frame_5)
-        self.frame_6.setObjectName(u"frame_6")
-        self.frame_6.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_6.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_2 = QHBoxLayout(self.frame_6)
-        self.horizontalLayout_2.setSpacing(2)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.frame_contenedor_malla = QFrame(self.frame_6)
+        self.frame = QFrame(self.frame_5)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_3 = QHBoxLayout(self.frame)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(3, 0, 0, 0)
+        self.frame_contenedor_malla = QFrame(self.frame)
         self.frame_contenedor_malla.setObjectName(u"frame_contenedor_malla")
         self.frame_contenedor_malla.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_contenedor_malla.setFrameShadow(QFrame.Shadow.Raised)
 
-        self.horizontalLayout_2.addWidget(self.frame_contenedor_malla)
+        self.horizontalLayout_3.addWidget(self.frame_contenedor_malla)
 
-        self.frame_9 = QFrame(self.frame_6)
-        self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_9.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.frame_9)
-        self.verticalLayout_3.setSpacing(2)
+        self.frame_4 = QFrame(self.frame)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.frame_4)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.frame_informacion_curso = QFrame(self.frame_9)
+        self.verticalLayout_3.setContentsMargins(3, 1, 1, 1)
+        self.frame_informacion_curso = QFrame(self.frame_4)
         self.frame_informacion_curso.setObjectName(u"frame_informacion_curso")
         self.frame_informacion_curso.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_informacion_curso.setFrameShadow(QFrame.Shadow.Raised)
 
         self.verticalLayout_3.addWidget(self.frame_informacion_curso)
 
-        self.frame_contenedor_planificaciones = QFrame(self.frame_9)
+        self.frame_contenedor_planificaciones = QFrame(self.frame_4)
         self.frame_contenedor_planificaciones.setObjectName(u"frame_contenedor_planificaciones")
         self.frame_contenedor_planificaciones.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_contenedor_planificaciones.setFrameShadow(QFrame.Shadow.Raised)
@@ -247,40 +259,43 @@ class MainWindow(object):
         self.verticalLayout_3.addWidget(self.frame_contenedor_planificaciones)
 
 
-        self.horizontalLayout_2.addWidget(self.frame_9)
+        self.horizontalLayout_3.addWidget(self.frame_4)
 
-        self.horizontalLayout_2.setStretch(0, 4)
-        self.horizontalLayout_2.setStretch(1, 1)
+        self.horizontalLayout_3.setStretch(0, 7)
+        self.horizontalLayout_3.setStretch(1, 2)
 
-        self.verticalLayout_2.addWidget(self.frame_6)
+        self.verticalLayout_2.addWidget(self.frame)
 
-        self.frame_7 = QFrame(self.frame_5)
-        self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_7.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_3 = QHBoxLayout(self.frame_7)
-        self.horizontalLayout_3.setSpacing(2)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 2)
-        self.frame_informacion_perfil = QFrame(self.frame_7)
+        self.frame_2 = QFrame(self.frame_5)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(3, 1, 1, 1)
+        self.frame_informacion_perfil = QFrame(self.frame_2)
         self.frame_informacion_perfil.setObjectName(u"frame_informacion_perfil")
         self.frame_informacion_perfil.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_informacion_perfil.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_6 = QVBoxLayout(self.frame_informacion_perfil)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
 
-        self.horizontalLayout_3.addWidget(self.frame_informacion_perfil)
+        self.horizontalLayout_2.addWidget(self.frame_informacion_perfil)
 
-        self.frame_informacion_planificacion = QFrame(self.frame_7)
+        self.frame_informacion_planificacion = QFrame(self.frame_2)
         self.frame_informacion_planificacion.setObjectName(u"frame_informacion_planificacion")
         self.frame_informacion_planificacion.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_informacion_planificacion.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_7 = QVBoxLayout(self.frame_informacion_planificacion)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
 
-        self.horizontalLayout_3.addWidget(self.frame_informacion_planificacion)
+        self.horizontalLayout_2.addWidget(self.frame_informacion_planificacion)
 
 
-        self.verticalLayout_2.addWidget(self.frame_7)
+        self.verticalLayout_2.addWidget(self.frame_2)
 
-        self.verticalLayout_2.setStretch(0, 6)
-        self.verticalLayout_2.setStretch(1, 2)
+        self.verticalLayout_2.setStretch(0, 10)
+        self.verticalLayout_2.setStretch(1, 3)
 
         self.horizontalLayout.addWidget(self.frame_5)
 
