@@ -3,10 +3,11 @@ from view.Ui_main_window_1 import MainWindow
 import os
 from PySide6.QtGui import QIcon
 from controller.perfil_widget import PerfilWidget
-from PySide6.QtWidgets import QVBoxLayout, QScrollArea, QSizePolicy
+from PySide6.QtWidgets import QVBoxLayout
 from PySide6.QtCore import Qt
 from controller.perfil_information_widget import PerfilWidgetInformation 
 from controller.planification_information import PlanificationWidgetInformation
+from controller.course_information import CourseWidgetInformation
 
 def cargar_estilo_qss(ruta_archivo):
         try:
@@ -43,6 +44,7 @@ class MainWindowForm(QMainWindow, MainWindow):
         self.load_perfil_cards()
         self.load_perfil_information_widget()
         self.load_planification_information_widget()
+        self.load_course_information_widget()
         self.boton_tema.clicked.connect(self.cambiar_tema)
 
     def load_perfil_cards(self):
@@ -94,6 +96,8 @@ class MainWindowForm(QMainWindow, MainWindow):
             self.perfil_info_widget.aplicar_tema(nuevo_tema)
         if hasattr(self, 'planification_info_widget'):
             self.planification_info_widget.aplicar_tema(nuevo_tema)
+        if hasattr(self, 'course_info_widget'):
+            self.course_info_widget.aplicar_tema(nuevo_tema)
 
     def resizeScrollArea_perfil_cards(self):
         self.scroll_area = self.scrollArea 
@@ -125,4 +129,14 @@ class MainWindowForm(QMainWindow, MainWindow):
         if info_layout is None:
             info_layout = QVBoxLayout(self.frame_informacion_planificacion)
             print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información.")
+        info_layout.addWidget(card)
+
+    def load_course_information_widget(self):
+        card= CourseWidgetInformation()
+        card.aplicar_tema(self.tema_actual)
+        self.course_info_widget = card
+        info_layout = self.frame_informacion_curso.layout() 
+        if info_layout is None:
+            info_layout = QVBoxLayout(self.frame_informacion_curso)
+            print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información curso.")
         info_layout.addWidget(card)

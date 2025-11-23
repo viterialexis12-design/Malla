@@ -25,9 +25,9 @@ class MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1920, 1044)
         MainWindow.setStyleSheet(u"QFrame , QWidget {\n"
-"    background-color: #FFFFFF;\n"
+"    background-color: #1A1C20;\n"
 "    border: none;\n"
-"    color: #212121;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "#titulo{\n"
 "    font-size: 24px;\n"
@@ -35,9 +35,9 @@ class MainWindow(object):
 "}\n"
 "\n"
 "#frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{\n"
-"    background-color: #F0F4F7; \n"
+"    background-color: #282C34; \n"
 "    border-radius: 10px;\n"
-"    color: black;	\n"
+"    color: white;	\n"
 "}\n"
 "\n"
 "#frame_contenedor_perfiles, #frame_barra_superior{\n"
@@ -46,37 +46,65 @@ class MainWindow(object):
 "\n"
 "#boton_tema , #boton_github, #boton_ayuda {\n"
 "    border: none;\n"
-"	color: black; \n"
-"	background-color: white;\n"
+"	color: white; \n"
+"	background-color: #1A1C20;\n"
 "	border-radius: 5px;\n"
 "	padding: 3px;\n"
 "}\n"
 "#boton_tema:hover,\n"
 "#boton_github:hover,\n"
 "#boton_buscar:hover,\n"
-"#boton_crear_perfil:hover,\n"
 "#boton_ayuda:hover {\n"
-"    background-color: #dbe0e3;         \n"
-"	 border-radius: 10px;      \n"
+"    background-color: #3C4048;         \n"
+"	border-radius: 10px;      \n"
 "}\n"
 "\n"
-"#boton_crear_perfil{\n"
-"    background-color: #212121; \n"
-""
-                        "	border-radius: 10px;\n"
-"    padding: 5px;\n"
+"#boton_crear_perfil:hover{\n"
+"    background-color: #bcc5d6;    \n"
+"}\n"
+"\n"
+"#boton_c"
+                        "rear_perfil{\n"
+"    background-color: #FFFFFF; \n"
+"	border-radius: 10px;\n"
+"	padding: 5px;\n"
 "}\n"
 "\n"
 "#boton_buscar{\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
-"	background-color: rgba(0,0,0,0);\n"
-"    padding: 5px;\n"
+"	background-color: rgba(0,0,0,0); \n"
 "}\n"
 "\n"
 " #linea_buscar{\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
+"}\n"
+"\n"
+"\n"
+"#frame_lista_planificaciones{\n"
+"    background-color: #212121;\n"
+"    color: #B0BEC5;\n"
+"    border-top-right-radius: 10px;\n"
+"    border-top-left-radius: 10px;\n"
+"}\n"
+"\n"
+"#frame_barra_superior_lista_planificacion{\n"
+"    background-color: #434444; \n"
+"	border-top-right-radius: 10px;\n"
+"    border-top-left-radius: 10px;\n"
+"	padding:5%;\n"
+"}\n"
+"\n"
+"\n"
+"#label_lista_planificaciones{\n"
+"    font-weight: bold;  \n"
+"    background-color: #434444; \n"
+"	color: #FFFFFF;     \n"
+"}\n"
+"\n"
+"#scrollArea_lista_planificacion{\n"
+"    border: 1px solid #434444;\n"
 "}\n"
 "\n"
 "\n"
@@ -106,27 +134,18 @@ class MainWindow(object):
 
         self.boton_tema = QPushButton(self.frame_barra_superior)
         self.boton_tema.setObjectName(u"boton_tema")
-        # icon = QIcon()
-        # icon.addFile(u"../resources/light_theme/moon.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # self.boton_tema.setIcon(icon)
         self.boton_tema.setIconSize(QSize(32, 32))
 
         self.horizontalLayout_4.addWidget(self.boton_tema)
 
         self.boton_github = QPushButton(self.frame_barra_superior)
         self.boton_github.setObjectName(u"boton_github")
-        # icon1 = QIcon()
-        # icon1.addFile(u"../resources/light_theme/Github_logo.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # self.boton_github.setIcon(icon1)
         self.boton_github.setIconSize(QSize(32, 32))
 
         self.horizontalLayout_4.addWidget(self.boton_github)
 
         self.boton_ayuda = QPushButton(self.frame_barra_superior)
         self.boton_ayuda.setObjectName(u"boton_ayuda")
-        # icon2 = QIcon()
-        # icon2.addFile(u"../resources/light_theme/help.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # self.boton_ayuda.setIcon(icon2)
         self.boton_ayuda.setIconSize(QSize(32, 32))
 
         self.horizontalLayout_4.addWidget(self.boton_ayuda)
@@ -167,9 +186,6 @@ class MainWindow(object):
 
         self.boton_buscar = QPushButton(self.frame_barra_busqueda)
         self.boton_buscar.setObjectName(u"boton_buscar")
-        # icon3 = QIcon()
-        # icon3.addFile(u"../resources/light_theme/search.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # self.boton_buscar.setIcon(icon3)
         self.boton_buscar.setIconSize(QSize(20, 20))
 
         self.barra_buscar.addWidget(self.boton_buscar)
@@ -179,9 +195,6 @@ class MainWindow(object):
 
         self.boton_crear_perfil = QPushButton(self.frame_barra_busqueda)
         self.boton_crear_perfil.setObjectName(u"boton_crear_perfil")
-        # icon4 = QIcon()
-        # icon4.addFile(u"../resources/light_theme/mas.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # self.boton_crear_perfil.setIcon(icon4)
         self.boton_crear_perfil.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_6.addWidget(self.boton_crear_perfil)
@@ -248,6 +261,8 @@ class MainWindow(object):
         self.frame_informacion_curso.setObjectName(u"frame_informacion_curso")
         self.frame_informacion_curso.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_informacion_curso.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_8 = QVBoxLayout(self.frame_informacion_curso)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
 
         self.verticalLayout_3.addWidget(self.frame_informacion_curso)
 
@@ -255,6 +270,47 @@ class MainWindow(object):
         self.frame_contenedor_planificaciones.setObjectName(u"frame_contenedor_planificaciones")
         self.frame_contenedor_planificaciones.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_contenedor_planificaciones.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_9 = QVBoxLayout(self.frame_contenedor_planificaciones)
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.frame_lista_planificaciones = QFrame(self.frame_contenedor_planificaciones)
+        self.frame_lista_planificaciones.setObjectName(u"frame_lista_planificaciones")
+        self.frame_lista_planificaciones.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_lista_planificaciones.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_10 = QVBoxLayout(self.frame_lista_planificaciones)
+        self.verticalLayout_10.setSpacing(0)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.frame_barra_superior_lista_planificacion = QFrame(self.frame_lista_planificaciones)
+        self.frame_barra_superior_lista_planificacion.setObjectName(u"frame_barra_superior_lista_planificacion")
+        self.frame_barra_superior_lista_planificacion.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_barra_superior_lista_planificacion.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.frame_barra_superior_lista_planificacion)
+        self.horizontalLayout_7.setSpacing(0)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.label_lista_planificaciones = QLabel(self.frame_barra_superior_lista_planificacion)
+        self.label_lista_planificaciones.setObjectName(u"label_lista_planificaciones")
+
+        self.horizontalLayout_7.addWidget(self.label_lista_planificaciones)
+
+
+        self.verticalLayout_10.addWidget(self.frame_barra_superior_lista_planificacion)
+
+        self.scrollArea_lista_planificacion = QScrollArea(self.frame_lista_planificaciones)
+        self.scrollArea_lista_planificacion.setObjectName(u"scrollArea_lista_planificacion")
+        self.scrollArea_lista_planificacion.setWidgetResizable(True)
+        self.scrollAreaWidgetContentslista_planificacion = QWidget()
+        self.scrollAreaWidgetContentslista_planificacion.setObjectName(u"scrollAreaWidgetContentslista_planificacion")
+        self.scrollAreaWidgetContentslista_planificacion.setGeometry(QRect(0, 0, 316, 619))
+        self.scrollArea_lista_planificacion.setWidget(self.scrollAreaWidgetContentslista_planificacion)
+
+        self.verticalLayout_10.addWidget(self.scrollArea_lista_planificacion)
+
+        self.verticalLayout_10.setStretch(0, 1)
+        self.verticalLayout_10.setStretch(1, 7)
+
+        self.verticalLayout_9.addWidget(self.frame_lista_planificaciones)
+
 
         self.verticalLayout_3.addWidget(self.frame_contenedor_planificaciones)
 
@@ -322,5 +378,6 @@ class MainWindow(object):
         self.linea_buscar.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Buscar perfiles", None))
         self.boton_buscar.setText("")
         self.boton_crear_perfil.setText("")
+        self.label_lista_planificaciones.setText(QCoreApplication.translate("MainWindow", u"Lista_de_planificaciones", None))
     # retranslateUi
 

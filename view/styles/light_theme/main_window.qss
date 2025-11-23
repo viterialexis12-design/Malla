@@ -56,3 +56,28 @@ QFrame , QWidget {
 	border-radius: 5px;
 	padding: 5px;
 }
+
+#frame_lista_planificaciones{
+    background-color: #FFFFFF;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #212121;
+}
+
+#frame_barra_superior_lista_planificacion{
+    background-color: #5c5e61; 
+	border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+	padding:5%;
+}
+
+
+#label_lista_planificaciones{
+    font-weight: bold;  
+    background-color: #5c5e61; 
+	color: #FFFFFF;     
+}
+
+#scrollArea_lista_planificacion{
+    border: 1px solid #5c5e61;
+}

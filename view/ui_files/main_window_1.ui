@@ -15,9 +15,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame , QWidget {
-    background-color: #FFFFFF;
+    background-color: #1A1C20;
     border: none;
-    color: #212121;
+    color: #FFFFFF;
 }
 #titulo{
     font-size: 24px;
@@ -25,9 +25,9 @@
 }
 
 #frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{
-    background-color: #F0F4F7; 
+    background-color: #282C34; 
     border-radius: 10px;
-    color: black;	
+    color: white;	
 }
 
 #frame_contenedor_perfiles, #frame_barra_superior{
@@ -36,36 +36,64 @@
 
 #boton_tema , #boton_github, #boton_ayuda {
     border: none;
-	color: black; 
-	background-color: white;
+	color: white; 
+	background-color: #1A1C20;
 	border-radius: 5px;
 	padding: 3px;
 }
 #boton_tema:hover,
 #boton_github:hover,
 #boton_buscar:hover,
-#boton_crear_perfil:hover,
 #boton_ayuda:hover {
-    background-color: #dbe0e3;         
-	 border-radius: 10px;      
+    background-color: #3C4048;         
+	border-radius: 10px;      
+}
+
+#boton_crear_perfil:hover{
+    background-color: #bcc5d6;    
 }
 
 #boton_crear_perfil{
-    background-color: #212121; 
+    background-color: #FFFFFF; 
 	border-radius: 10px;
-    padding: 5px;
+	padding: 5px;
 }
 
 #boton_buscar{
 	border-radius: 5px;
 	padding: 5px;
-	background-color: rgba(0,0,0,0);
-    padding: 5px;
+	background-color: rgba(0,0,0,0); 
 }
 
  #linea_buscar{
 	border-radius: 5px;
 	padding: 5px;
+}
+
+
+#frame_lista_planificaciones{
+    background-color: #212121;
+    color: #B0BEC5;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#frame_barra_superior_lista_planificacion{
+    background-color: #434444; 
+	border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+	padding:5%;
+}
+
+
+#label_lista_planificaciones{
+    font-weight: bold;  
+    background-color: #434444; 
+	color: #FFFFFF;     
+}
+
+#scrollArea_lista_planificacion{
+    border: 1px solid #434444;
 }
 
 
@@ -408,6 +436,7 @@
                   <property name="frameShadow">
                    <enum>QFrame::Shadow::Raised</enum>
                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_8"/>
                  </widget>
                 </item>
                 <item>
@@ -418,6 +447,86 @@
                   <property name="frameShadow">
                    <enum>QFrame::Shadow::Raised</enum>
                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QFrame" name="frame_lista_planificaciones">
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,7">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QFrame" name="frame_barra_superior_lista_planificacion">
+                        <property name="frameShape">
+                         <enum>QFrame::Shape::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Shadow::Raised</enum>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_7">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_lista_planificaciones">
+                           <property name="text">
+                            <string>Lista_de_planificaciones</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QScrollArea" name="scrollArea_lista_planificacion">
+                        <property name="widgetResizable">
+                         <bool>true</bool>
+                        </property>
+                        <widget class="QWidget" name="scrollAreaWidgetContentslista_planificacion">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>0</y>
+                           <width>316</width>
+                           <height>619</height>
+                          </rect>
+                         </property>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                </layout>
