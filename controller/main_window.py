@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt
 from controller.perfil_information_widget import PerfilWidgetInformation 
 from controller.planification_information import PlanificationWidgetInformation
 from controller.course_information import CourseWidgetInformation
+from controller.course_controller import CourseWidget
 
 def cargar_estilo_qss(ruta_archivo):
         try:
@@ -45,6 +46,7 @@ class MainWindowForm(QMainWindow, MainWindow):
         self.load_perfil_information_widget()
         self.load_planification_information_widget()
         self.load_course_information_widget()
+        self.load_mesh()
         self.boton_tema.clicked.connect(self.cambiar_tema)
 
     def load_perfil_cards(self):
@@ -92,6 +94,7 @@ class MainWindowForm(QMainWindow, MainWindow):
         nuevo_tema = "light_theme" if self.tema_actual == "dark_theme" else "dark_theme"
         self.aplicar_tema(nuevo_tema)
         self.load_perfil_cards()
+        self.load_mesh()
         if hasattr(self, 'perfil_info_widget'):
             self.perfil_info_widget.aplicar_tema(nuevo_tema)
         if hasattr(self, 'planification_info_widget'):
@@ -140,3 +143,10 @@ class MainWindowForm(QMainWindow, MainWindow):
             info_layout = QVBoxLayout(self.frame_informacion_curso)
             print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información curso.")
         info_layout.addWidget(card)
+    
+    def load_mesh(self):
+        for i in range(8):
+            for j in range(6):
+                new_course = CourseWidget()
+                new_course.aplicar_tema(self.tema_actual)
+                self.gridLayout.addWidget(new_course, i, j)

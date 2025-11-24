@@ -81,3 +81,53 @@ QFrame , QWidget {
 #scrollArea_lista_planificacion{
     border: 1px solid #5c5e61;
 }
+
+#scrollArea_malla, #scrollAreaWidgetContents_malla{
+    background-color: transparent;
+}
+
+#scrollArea, 
+#contenedor, 
+#scrollArea QWidget {
+    background-color: transparent;
+}
+
+#scrollArea QScrollBar:vertical,
+#scrollArea_malla QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0; 
+    width: 10px; 
+    margin: 0px 0px 0px 0px;
+    border-radius: 5px; 
+}
+
+#scrollArea_malla QScrollBar:horizontal {
+    border: none;
+    background: #E0E0E0; 
+    height: 10px; 
+    margin: 0px 0px 0px 0px;
+    border-radius: 5px; 
+}
+
+#scrollArea QScrollBar::handle:vertical,
+#scrollArea_malla QScrollBar::handle:vertical {
+    background: #808080; 
+    min-height: 25px; 
+    border-radius: 4px; 
+}
+
+#scrollArea_malla QScrollBar::handle:horizontal {
+    background: #808080; 
+    min-width: 25px; 
+    border-radius: 4px; 
+}
+
+#scrollArea QScrollBar::add-line,
+#scrollArea QScrollBar::sub-line,
+#scrollArea_malla QScrollBar::add-line,
+#scrollArea_malla QScrollBar::sub-line {
+    border: none;
+    background: none;
+    height: 0px; 
+    width: 0px; 
+}

@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QScrollArea,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QPushButton,
+    QScrollArea, QSizePolicy, QSpacerItem, QVBoxLayout,
+    QWidget)
 
 class MainWindow(object):
     def setupUi(self, MainWindow):
@@ -247,6 +248,20 @@ class MainWindow(object):
         self.frame_contenedor_malla.setObjectName(u"frame_contenedor_malla")
         self.frame_contenedor_malla.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_contenedor_malla.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_8 = QHBoxLayout(self.frame_contenedor_malla)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.scrollArea_malla = QScrollArea(self.frame_contenedor_malla)
+        self.scrollArea_malla.setObjectName(u"scrollArea_malla")
+        self.scrollArea_malla.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_malla = QWidget()
+        self.scrollAreaWidgetContents_malla.setObjectName(u"scrollAreaWidgetContents_malla")
+        self.scrollAreaWidgetContents_malla.setGeometry(QRect(0, 0, 1172, 736))
+        self.gridLayout = QGridLayout(self.scrollAreaWidgetContents_malla)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.scrollArea_malla.setWidget(self.scrollAreaWidgetContents_malla)
+
+        self.horizontalLayout_8.addWidget(self.scrollArea_malla)
+
 
         self.horizontalLayout_3.addWidget(self.frame_contenedor_malla)
 

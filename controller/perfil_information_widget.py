@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import QWidget 
 from view.Ui_perfil_information import Form
 from PySide6.QtWidgets import QSizePolicy
-from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 import os
 

@@ -15,9 +15,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame , QWidget {
-    background-color: #1A1C20;
+    background-color: #FFFFFF;
     border: none;
-    color: #FFFFFF;
+    color: #212121;
 }
 #titulo{
     font-size: 24px;
@@ -25,9 +25,9 @@
 }
 
 #frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{
-    background-color: #282C34; 
+    background-color: #F0F4F7; 
     border-radius: 10px;
-    color: white;	
+    color: black;	
 }
 
 #frame_contenedor_perfiles, #frame_barra_superior{
@@ -36,33 +36,36 @@
 
 #boton_tema , #boton_github, #boton_ayuda {
     border: none;
-	color: white; 
-	background-color: #1A1C20;
+	color: black; 
+	background-color: white;
 	border-radius: 5px;
 	padding: 3px;
 }
 #boton_tema:hover,
 #boton_github:hover,
 #boton_buscar:hover,
+#boton_crear_perfil:hover,
 #boton_ayuda:hover {
-    background-color: #3C4048;         
-	border-radius: 10px;      
+    background-color: #dbe0e3;         
+	 border-radius: 10px;      
 }
 
+
 #boton_crear_perfil:hover{
-    background-color: #bcc5d6;    
+    background-color: #acafb5;    
 }
 
 #boton_crear_perfil{
-    background-color: #FFFFFF; 
+    background-color: #212121; 
 	border-radius: 10px;
-	padding: 5px;
+    padding: 5px;
 }
 
 #boton_buscar{
 	border-radius: 5px;
 	padding: 5px;
-	background-color: rgba(0,0,0,0); 
+	background-color: rgba(0,0,0,0);
+    padding: 5px;
 }
 
  #linea_buscar{
@@ -70,16 +73,15 @@
 	padding: 5px;
 }
 
-
 #frame_lista_planificaciones{
-    background-color: #212121;
-    color: #B0BEC5;
+    background-color: #FFFFFF;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    color: #212121;
 }
 
 #frame_barra_superior_lista_planificacion{
-    background-color: #434444; 
+    background-color: #5c5e61; 
 	border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 	padding:5%;
@@ -88,15 +90,21 @@
 
 #label_lista_planificaciones{
     font-weight: bold;  
-    background-color: #434444; 
+    background-color: #5c5e61; 
 	color: #FFFFFF;     
 }
 
 #scrollArea_lista_planificacion{
-    border: 1px solid #434444;
+    border: 1px solid #5c5e61;
 }
 
+#scrollArea_malla, #scrollAreaWidgetContents_malla{
+    background-color: transparent;
+}
 
+#scrollArea, #contenedor{
+    background-color: rgba(0,0,0,0);
+}
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -405,6 +413,26 @@
                <property name="frameShadow">
                 <enum>QFrame::Shadow::Raised</enum>
                </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QScrollArea" name="scrollArea_malla">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents_malla">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>1172</width>
+                     <height>736</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout"/>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>

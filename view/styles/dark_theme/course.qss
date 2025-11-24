@@ -1,0 +1,44 @@
+QWidget{
+    background-color: #212121;
+}
+QLabel{
+    border: 1px solid #5A5A5A;
+    color: #B0BEC5;
+}
+#frame_container{
+    background-color: #212121;
+    border-radius: 15%;
+    border: 1px solid #5A5A5A;
+}
+
+#label_code,#label_name{
+    font: bold;
+    background-color: #5A5A5A; 
+    color: #FFFFFF;
+    padding-left: 5%;
+    padding-right: 5%;
+    border:none;
+}
+
+#frame_top_bar{
+    background-color: #5A5A5A; 
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    padding:5%;
+}
+
+#frame_grid{
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+#label_total_credits{
+    border-bottom-right-radius: 10%;
+}
+
+#label_cd_hours{
+    border-bottom-left-radius: 10%;
+}
+
+#frame_prerequisites{
+    border:none;
+}
