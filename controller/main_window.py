@@ -9,6 +9,10 @@ from controller.perfil_information_widget import PerfilWidgetInformation
 from controller.planification_information import PlanificationWidgetInformation
 from controller.course_information import CourseWidgetInformation
 from controller.course_controller import CourseWidget
+from model.course import Course
+from model.profile import Profile
+from model.adg import ADG
+from model.mesh import Mesh
 
 def cargar_estilo_qss(ruta_archivo):
         try:
@@ -40,13 +44,15 @@ class MainWindowForm(QMainWindow, MainWindow):
                 "boton_buscar": "../Malla/view/resources/light_theme/search.svg",
             }
         }
+        self.profiles_adg = ADG()
+        self.profiles_adg.load_from_json_profiles("data/profiles/profiles.json")
+        self.current_profile = Profile()
         self.aplicar_tema(self.tema_actual)
         self.resizeScrollArea_perfil_cards()
         self.load_perfil_cards()
         self.load_perfil_information_widget()
         self.load_planification_information_widget()
         self.load_course_information_widget()
-        self.load_mesh()
         self.boton_tema.clicked.connect(self.cambiar_tema)
 
     def load_perfil_cards(self):
@@ -54,11 +60,18 @@ class MainWindowForm(QMainWindow, MainWindow):
             child = self.vertical_layout.takeAt(0)
             if child.widget():
                 child.widget().deleteLater()
-        
-        for i in range(10):
-            card = PerfilWidget()
+
+        profiles_to_display = self.profiles_adg.profiles
+        for profile in profiles_to_display:
+            card = PerfilWidget(click_handler=self.handle_profile_click)
+            card.set_profile_data(profile)  
             card.aplicar_tema(self.tema_actual)
             self.vertical_layout.insertWidget(self.vertical_layout.count() - 1, card)
+
+    def handle_profile_click(self, profile_object):
+        print(f"--> Clic directo detectado en el perfil: {profile_object.name}")
+        self.current_profile = profile_object
+        self.load_mesh(profile_object)
 
     def update_width_profile_cards(self, event):
         viewport_width = self.scroll_area.viewport().width()
@@ -93,14 +106,35 @@ class MainWindowForm(QMainWindow, MainWindow):
     def cambiar_tema(self):
         nuevo_tema = "light_theme" if self.tema_actual == "dark_theme" else "dark_theme"
         self.aplicar_tema(nuevo_tema)
-        self.load_perfil_cards()
-        self.load_mesh()
+        self.update_profile_cards_theme(nuevo_tema)
+        self.update_mesh_theme(nuevo_tema)
+        self.update_profile_info_theme(nuevo_tema)
+        self.update_planification_info_theme(nuevo_tema)
+        self.update_course_info_theme(nuevo_tema)
+        
+    def update_mesh_theme(self, tema):
+        for i in range(self.gridLayout.count()):
+            widget = self.gridLayout.itemAt(i).widget()
+            if widget and hasattr(widget, 'aplicar_tema'):
+                widget.aplicar_tema(tema)
+    
+    def update_profile_cards_theme(self, theme):
+        for i in range(self.vertical_layout.count() - 1): 
+            widget = self.vertical_layout.itemAt(i).widget()
+            if widget and hasattr(widget, 'aplicar_tema'):
+                widget.aplicar_tema(theme)
+
+    def update_profile_info_theme(self, theme):
         if hasattr(self, 'perfil_info_widget'):
-            self.perfil_info_widget.aplicar_tema(nuevo_tema)
+            self.perfil_info_widget.aplicar_tema(theme)
+
+    def update_planification_info_theme(self, theme):
         if hasattr(self, 'planification_info_widget'):
-            self.planification_info_widget.aplicar_tema(nuevo_tema)
+            self.planification_info_widget.aplicar_tema(theme)
+
+    def update_course_info_theme(self, theme):
         if hasattr(self, 'course_info_widget'):
-            self.course_info_widget.aplicar_tema(nuevo_tema)
+            self.course_info_widget.aplicar_tema(theme)
 
     def resizeScrollArea_perfil_cards(self):
         self.scroll_area = self.scrollArea 
@@ -144,9 +178,25 @@ class MainWindowForm(QMainWindow, MainWindow):
             print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información curso.")
         info_layout.addWidget(card)
     
-    def load_mesh(self):
-        for i in range(8):
-            for j in range(6):
-                new_course = CourseWidget()
-                new_course.aplicar_tema(self.tema_actual)
-                self.gridLayout.addWidget(new_course, i, j)
+    def load_mesh(self,perfil):
+        while self.gridLayout.count():
+            child = self.gridLayout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        mesh = Mesh()
+        mesh.load_from_json_mesh("data/mesh", perfil.mesh_id)
+        courses_to_display = mesh.adg_courses.courses.values()
+        print(f"Cargando malla '{mesh.name}' con {len(courses_to_display)} cursos...")
+        for course_object in courses_to_display:
+            try:
+                row = course_object.x
+                col = course_object.y
+            except AttributeError:
+                print(f"Advertencia: El curso {course_object.code} no tiene coordenadas 'x' o 'y'. Se omitirá.")
+                continue
+            new_course_widget = CourseWidget()
+            new_course_widget.set_course_data(course_object) 
+            new_course_widget.aplicar_tema(self.tema_actual)
+            self.gridLayout.addWidget(new_course_widget, row, col)
+            
+        print("Carga de malla completada.")

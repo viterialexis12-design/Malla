@@ -16,10 +16,11 @@ class CourseWidget(QWidget):
         super().__init__(parent)
         self.ui = Form()
         self.ui.setupUi(self)
-        self.setSizePolicy(
-            QSizePolicy.Policy.Expanding, 
-            QSizePolicy.Policy.Preferred 
-        )
+        # self.setSizePolicy(
+        #     QSizePolicy.Policy.Expanding, 
+        #     QSizePolicy.Policy.Expanding 
+        # )
+        self.setFixedSize(400, 140)
 
     def aplicar_tema(self, tema):
         ruta_base = os.path.dirname(os.path.abspath(__file__)) 
@@ -32,3 +33,17 @@ class CourseWidget(QWidget):
             return
         estilo = cargar_estilo_qss(ruta_estilo)
         self.setStyleSheet(estilo)
+        
+    def set_course_data(self, course):
+        self.ui.label_code.setText(course.code)
+        self.ui.label_name.setText(course.name)
+        self.ui.label_cd.setText(str(course.cd))
+        self.ui.label_cpe.setText(str(course.cpe))
+        self.ui.label_ca.setText(str(course.ca))
+        self.ui.label_hs.setText(str(course.hs))
+        self.ui.label_hpao.setText(str(course.hpao))
+        self.ui.label_cd_hours.setText(str(course.cd_hours))
+        self.ui.label_cpe_hours.setText(str(course.cpe_hours))
+        self.ui.label_ca_hours.setText(str(course.ca_hours))
+        self.ui.label_presential_hours.setText(str(course.presential_hours))
+        self.ui.label_total_credits.setText(str(course.total_credits))

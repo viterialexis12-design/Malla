@@ -3,7 +3,7 @@ import fitz
 from .course import Course
 class Pdf_Parser:
 
-    def __init__(self, pdf_path,x0,y0,x1,y1):
+    def __init__(self, pdf_path="",x0=0,y0=0,x1=0,y1=0):
         self.pdf_path = pdf_path
         self.x0 = x0
         self.y0 = y0
@@ -39,7 +39,7 @@ class Pdf_Parser:
         return self.x0+212, self.y0+92.5, self.x0+312, self.y0+148
     
     def read_blocks(self, row, col, academic_adg):
-        course = Course('', '', [], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0)
+        course = Course('', '', [], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 'unvisited')
         for block_index in range(7):
             adjust_method = getattr(self, f'adjust_coordinates_{block_index}')
             x0, y0, x1, y1 = adjust_method()

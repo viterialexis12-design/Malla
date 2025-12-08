@@ -35,7 +35,8 @@ QPushButton{
 	border-bottom-left-radius: 10px;
 }
 #label_cursos_habilitados, #label_malla{
-    font-weight: bold;     
+    font-weight: bold;   
+	color: #5c5e61;  
 }
 
 #label_informacion_perfil{

@@ -229,7 +229,7 @@ class Form(object):
         self.label_nombre_perfil.setText(QCoreApplication.translate("Form", u"Cosa esta aaaa", None))
         self.boton_editar.setText("")
         self.boton_borrar.setText("")
-        self.label_cursos_habilitados.setText(QCoreApplication.translate("Form", u"Cursos para los que esta habilitado:", None))
+        self.label_cursos_habilitados.setText(QCoreApplication.translate("Form", u"Cursos habilitados:", None))
         self.label_malla.setText(QCoreApplication.translate("Form", u"Malla:", None))
         self.label_malla_nombre.setText(QCoreApplication.translate("Form", u"Curso para bailar mambo", None))
     # retranslateUi

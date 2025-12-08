@@ -222,7 +222,7 @@ QPushButton{
          <item>
           <widget class="QLabel" name="label_cursos_habilitados">
            <property name="text">
-            <string>Cursos para los que esta habilitado:</string>
+            <string>Cursos habilitados:</string>
            </property>
           </widget>
          </item>

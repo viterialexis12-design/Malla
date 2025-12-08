@@ -1,0 +1,235 @@
+{
+    "profiles": {
+        "perfil_alex": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-05-20",
+            "note": "Nota de perfil 1",
+            "planifications": [
+                {
+                    "name": "Planificacion 2024-1",
+                    "note": "sexito",
+                    "creation_date": "2024-06-01",
+                    "courses_id": [
+                        "CS101",
+                        "MA101"
+                    ]
+                },
+                {
+                    "name": "Planificacion 2024-2",
+                    "note": "exito",
+                    "creation_date": "2024-06-15",
+                    "courses_id": [
+                        "PH101",
+                        "CS102"
+                    ]
+                }
+            ]
+        },
+        "perfil2": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-05-20",
+            "note": "Nota de perfil 1",
+            "planifications": [
+                {
+                    "name": "Planificacion 2024-1",
+                    "note": "sexito",
+                    "creation_date": "2024-06-01",
+                    "courses_id": [
+                        "CS101",
+                        "MA101"
+                    ]
+                },
+                {
+                    "name": "Planificacion 2024-2",
+                    "note": "exito",
+                    "creation_date": "2024-06-15",
+                    "courses_id": [
+                        "PH101",
+                        "CS1022"
+                    ]
+                }
+            ]
+        },
+        "perfil3": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-06-01",
+            "note": "Perfil de Ingeniería de Software.",
+            "planifications": [
+                {
+                    "name": "Planif. Backend",
+                    "note": "Enfocado en Python y bases de datos.",
+                    "creation_date": "2024-07-05",
+                    "courses_id": [
+                        "PY201",
+                        "DB305"
+                    ]
+                }
+            ]
+        },
+        "perfil4": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-06-10",
+            "note": "Perfil de Diseño Gráfico y UI/UX.",
+            "planifications": [
+                {
+                    "name": "Planif. Diseño",
+                    "note": "Cursos de Adobe Suite y tipografía.",
+                    "creation_date": "2024-07-15",
+                    "courses_id": [
+                        "DSG101",
+                        "UXR205"
+                    ]
+                }
+            ]
+        },
+        "perfil5": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-06-15",
+            "note": "Perfil de Finanzas y Contabilidad.",
+            "planifications": [
+                {
+                    "name": "Planif. Q3",
+                    "note": "Análisis de mercado y balances.",
+                    "creation_date": "2024-07-20",
+                    "courses_id": [
+                        "FIN401",
+                        "ACC303"
+                    ]
+                },
+                {
+                    "name": "Planif. Q4",
+                    "note": "Preparación de impuestos.",
+                    "creation_date": "2024-08-01",
+                    "courses_id": [
+                        "TAX100"
+                    ]
+                }
+            ]
+        },
+        "perfil6": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-06-20",
+            "note": "Perfil de Ciencias de Datos.",
+            "planifications": [
+                {
+                    "name": "Planif. ML",
+                    "note": "Modelos de Machine Learning.",
+                    "creation_date": "2024-07-25",
+                    "courses_id": [
+                        "DS501",
+                        "STAT400"
+                    ]
+                }
+            ]
+        },
+        "perfil7": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-07-01",
+            "note": "Perfil de Marketing Digital.",
+            "planifications": [
+                {
+                    "name": "Planif. SEO",
+                    "note": "Estrategias de posicionamiento.",
+                    "creation_date": "2024-08-05",
+                    "courses_id": [
+                        "MKT301"
+                    ]
+                },
+                {
+                    "name": "Planif. Social",
+                    "note": "Gestión de redes.",
+                    "creation_date": "2024-08-15",
+                    "courses_id": [
+                        "SM201"
+                    ]
+                }
+            ]
+        },
+        "perfil8": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-07-10",
+            "note": "Perfil de Desarrollo Móvil (Android).",
+            "planifications": [
+                {
+                    "name": "Planif. Kotlin",
+                    "note": "Desarrollo nativo.",
+                    "creation_date": "2024-09-01",
+                    "courses_id": [
+                        "AND101",
+                        "JAVA300"
+                    ]
+                }
+            ]
+        },
+        "perfil9": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-07-15",
+            "note": "Perfil de Estudios Legales.",
+            "planifications": [
+                {
+                    "name": "Planif. Derecho Civil",
+                    "note": "Introducción a las leyes.",
+                    "creation_date": "2024-09-10",
+                    "courses_id": [
+                        "LAW101",
+                        "POLS201"
+                    ]
+                }
+            ]
+        },
+        "perfil10": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-07-20",
+            "note": "Perfil de Recursos Humanos.",
+            "planifications": [
+                {
+                    "name": "Planif. Liderazgo",
+                    "note": "Gestión de equipos.",
+                    "creation_date": "2024-09-15",
+                    "courses_id": [
+                        "HRM301"
+                    ]
+                },
+                {
+                    "name": "Planif. Nómina",
+                    "note": "Procesos contables.",
+                    "creation_date": "2024-09-20",
+                    "courses_id": [
+                        "ACC101"
+                    ]
+                }
+            ]
+        },
+        "perfil11": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-07-25",
+            "note": "Perfil de Arquitectura Cloud (AWS/Azure).",
+            "planifications": [
+                {
+                    "name": "Planif. AWS",
+                    "note": "Servicios fundamentales de Cloud.",
+                    "creation_date": "2024-10-01",
+                    "courses_id": [
+                        "CLOUD201",
+                        "NET300"
+                    ]
+                }
+            ]
+        },
+        "perfil12": {
+            "mesh_id": "6cb9798d-ce41-11f0-b64f-2811a88c0249",
+            "creation_date": "2024-08-01",
+            "note": "Perfil de Producción Audiovisual.",
+            "planifications": [
+                {
+                    "name": "Planif. Edición",
+                    "note": "Técnicas de postproducción.",
+                    "creation_date": "2024-10-10",
+                    "courses_id": [
+                        "VID101"
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -111,13 +111,13 @@ QFrame , QWidget {
 
 #scrollArea QScrollBar::handle:vertical,
 #scrollArea_malla QScrollBar::handle:vertical {
-    background: #808080; 
+    background: #a8a8a8; 
     min-height: 25px; 
     border-radius: 4px; 
 }
 
 #scrollArea_malla QScrollBar::handle:horizontal {
-    background: #808080; 
+    background: #a8a8a8; 
     min-width: 25px; 
     border-radius: 4px; 
 }
