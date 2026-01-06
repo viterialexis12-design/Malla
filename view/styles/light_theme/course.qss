@@ -3,7 +3,7 @@ QWidget{
 }
 QLabel{
     border: 1px solid #B0B0B0;
-    color: #212121;
+    color: #6e6e6e;
 }
 #frame_container{
     background-color: #F5F5F5;
@@ -41,4 +41,8 @@ QLabel{
 
 #frame_prerequisites{
     border:none;
+}
+
+#frame_top_bar:hover{
+    border: 3px solid rgb(3, 169, 244); 
 }

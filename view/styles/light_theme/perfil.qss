@@ -1,7 +1,7 @@
 QWidget {
     background-color: #FFFFFF;
     border: none;
-    color: #212121;
+    color: #6e6e6e;
 }
 QPushButton{
     border: none;
@@ -23,20 +23,20 @@ QPushButton{
 }
 
 #barra_superior{
-	background-color: #5c5e61; 
+	background-color: #B0B0B0; 
 	border-top-right-radius: 10px;
 	padding:5%;
 }
 
 #frame_contenedor_contenido_perfil{
-	border-right: 1px solid #5c5e61;
-	border-left: 1px solid #5c5e61;
-	border-bottom: 1px solid #5c5e61;
+	border-right: 1px solid #B0B0B0;
+	border-left: 1px solid #B0B0B0;
+	border-bottom: 1px solid #B0B0B0;
 	border-bottom-left-radius: 10px;
 }
 
 #nombre_perfil {
-	background-color: #5c5e61; 
+	background-color: #B0B0B0; 
 	color: white;
     font-weight: bold;     
 }
@@ -46,8 +46,8 @@ QPushButton{
 }
 
 #barra_superior:hover{
-	border: 3px solid rgba(3, 169, 244, 0.4);
-    border-right: 3px solid rgba(3, 169, 244, 0.4);
-    border-left: 3px solid rgba(3, 169, 244, 0.4);
+	border: 3px solid rgb(3, 169, 244);
+    border-right: 3px solid rgb(3, 169, 244);
+    border-left: 3px solid rgb(3, 169, 244);
 }
 

@@ -1,7 +1,7 @@
 QWidget {
     background-color: #FFFFFF;
     border: none;
-    color: #212121;
+    color: #6e6e6e;
 }
 QPushButton{
     border: none;
@@ -23,15 +23,15 @@ QPushButton{
 }
 
 #frame_barra_superior{
-	background-color: #5c5e61; 
+	background-color: #B0B0B0; 
 	border-top-right-radius: 10px;
 	padding:5%;
 }
 
 #frame_contenido{
-	border-right: 1px solid #5c5e61;
-	border-left: 1px solid #5c5e61;
-	border-bottom: 1px solid #5c5e61;
+	border-right: 1px solid #B0B0B0;
+	border-left: 1px solid #B0B0B0;
+	border-bottom: 1px solid #B0B0B0;
 	border-bottom-left-radius: 10px;
 }
 
@@ -40,7 +40,7 @@ QPushButton{
 }
 
 #label_nombre_planificacion, #label_planificacion ,#label_nota,#frame_inferior{
-	background-color: #5c5e61; 
+	background-color: #B0B0B0; 
 	color: #FFFFFF;    
 }
 
@@ -49,6 +49,6 @@ QPushButton{
 }
 
 #scrollArea_planificacion,#scrollArea_proximo{
-    border: 1px solid #5c5e61;
+    border: 1px solid #B0B0B0;
 }
 

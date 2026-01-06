@@ -12,14 +12,12 @@ def cargar_estilo_qss(ruta_archivo):
             return ""
 
 class CourseWidget(QWidget):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None,click_handler=None):
         super().__init__(parent)
+        self.course=None
+        self.click_handler=click_handler
         self.ui = Form()
         self.ui.setupUi(self)
-        # self.setSizePolicy(
-        #     QSizePolicy.Policy.Expanding, 
-        #     QSizePolicy.Policy.Expanding 
-        # )
         self.setFixedSize(400, 140)
 
     def aplicar_tema(self, tema):
@@ -35,6 +33,7 @@ class CourseWidget(QWidget):
         self.setStyleSheet(estilo)
         
     def set_course_data(self, course):
+        self.course = course
         self.ui.label_code.setText(course.code)
         self.ui.label_name.setText(course.name)
         self.ui.label_cd.setText(str(course.cd))
@@ -47,3 +46,8 @@ class CourseWidget(QWidget):
         self.ui.label_ca_hours.setText(str(course.ca_hours))
         self.ui.label_presential_hours.setText(str(course.presential_hours))
         self.ui.label_total_credits.setText(str(course.total_credits))
+
+    def mousePressEvent(self, event):
+        if self.course and self.click_handler:
+            self.click_handler(self.course)  
+        super().mousePressEvent(event)

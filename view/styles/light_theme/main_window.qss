@@ -1,7 +1,7 @@
 QFrame , QWidget {
     background-color: #FFFFFF;
     border: none;
-    color: #212121;
+    color: #6e6e6e;
 }
 #titulo{
     font-size: 24px;
@@ -11,7 +11,7 @@ QFrame , QWidget {
 #frame_barra_busqueda, #frame_contenedor_perfiles, #frame_informacion_perfil, #frame_informacion_planificacion,#frame_contenedor_planificaciones,#frame_informacion_curso, #frame_contenedor_malla{
     background-color: #F0F4F7; 
     border-radius: 10px;
-    color: black;	
+    color: #6e6e6e;	
 }
 
 #frame_contenedor_perfiles, #frame_barra_superior{
@@ -20,7 +20,7 @@ QFrame , QWidget {
 
 #boton_tema , #boton_github, #boton_ayuda {
     border: none;
-	color: black; 
+	color: #6e6e6e; 
 	background-color: white;
 	border-radius: 5px;
 	padding: 3px;
@@ -40,7 +40,7 @@ QFrame , QWidget {
 }
 
 #boton_crear_perfil{
-    background-color: #212121; 
+    background-color: #6e6e6e; 
 	border-radius: 10px;
     padding: 5px;
 }
@@ -61,11 +61,11 @@ QFrame , QWidget {
     background-color: #FFFFFF;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    color: #212121;
+    color: #6e6e6e;
 }
 
 #frame_barra_superior_lista_planificacion{
-    background-color: #5c5e61; 
+    background-color: #B0B0B0; 
 	border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 	padding:5%;
@@ -74,12 +74,12 @@ QFrame , QWidget {
 
 #label_lista_planificaciones{
     font-weight: bold;  
-    background-color: #5c5e61; 
+    background-color: #B0B0B0; 
 	color: #FFFFFF;     
 }
 
 #scrollArea_lista_planificacion{
-    border: 1px solid #5c5e61;
+    border: 1px solid #B0B0B0;
 }
 
 #scrollArea_malla, #scrollAreaWidgetContents_malla{

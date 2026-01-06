@@ -13,6 +13,7 @@ from model.course import Course
 from model.profile import Profile
 from model.adg import ADG
 from model.mesh import Mesh
+from PySide6.QtWidgets import QLayout
 
 def cargar_estilo_qss(ruta_archivo):
         try:
@@ -52,7 +53,6 @@ class MainWindowForm(QMainWindow, MainWindow):
         self.load_perfil_cards()
         self.load_perfil_information_widget()
         self.load_planification_information_widget()
-        self.load_course_information_widget()
         self.boton_tema.clicked.connect(self.cambiar_tema)
 
     def load_perfil_cards(self):
@@ -72,6 +72,22 @@ class MainWindowForm(QMainWindow, MainWindow):
         print(f"--> Clic directo detectado en el perfil: {profile_object.name}")
         self.current_profile = profile_object
         self.load_mesh(profile_object)
+
+    def _clear_layout(self, layout):
+        if layout is None: return
+        while layout.count():
+            item = layout.takeAt(0)
+            widget = item.widget()
+            if widget is not None:
+                widget.deleteLater()
+            else:
+                if isinstance(item.layout(), QLayout):
+                    self._clear_layout(item.layout())
+    
+    def handle_course_click(self, course_object):
+        print(f"--> Clic directo detectado en el curso: {course_object.name}")
+        self.current_course = course_object
+        self.load_course_information_widget(course_object)
 
     def update_width_profile_cards(self, event):
         viewport_width = self.scroll_area.viewport().width()
@@ -168,16 +184,19 @@ class MainWindowForm(QMainWindow, MainWindow):
             print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información.")
         info_layout.addWidget(card)
 
-    def load_course_information_widget(self):
-        card= CourseWidgetInformation()
-        card.aplicar_tema(self.tema_actual)
-        self.course_info_widget = card
+    def load_course_information_widget(self, course):
+    
         info_layout = self.frame_informacion_curso.layout() 
         if info_layout is None:
             info_layout = QVBoxLayout(self.frame_informacion_curso)
-            print("Advertencia: Se creó un nuevo QVBoxLayout para el frame de información curso.")
+        else:
+            self._clear_layout(info_layout) 
+        card = CourseWidgetInformation()
+        card.set_data(course)
+        card.aplicar_tema(self.tema_actual)
+        self.course_info_widget = card 
         info_layout.addWidget(card)
-    
+
     def load_mesh(self,perfil):
         while self.gridLayout.count():
             child = self.gridLayout.takeAt(0)
@@ -194,7 +213,7 @@ class MainWindowForm(QMainWindow, MainWindow):
             except AttributeError:
                 print(f"Advertencia: El curso {course_object.code} no tiene coordenadas 'x' o 'y'. Se omitirá.")
                 continue
-            new_course_widget = CourseWidget()
+            new_course_widget = CourseWidget(click_handler=self.handle_course_click)
             new_course_widget.set_course_data(course_object) 
             new_course_widget.aplicar_tema(self.tema_actual)
             self.gridLayout.addWidget(new_course_widget, row, col)
